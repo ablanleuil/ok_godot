@@ -1,0 +1,47 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Resource",
+"class": "Config",
+"language": "GDScript",
+"path": "res://iniformat/config_import_plugin/config.gd"
+}, {
+"base": "ResourceFormatLoader",
+"class": "ConfigLoader",
+"language": "GDScript",
+"path": "res://iniformat/config_import_plugin/config_loader.gd"
+}, {
+"base": "ResourceFormatSaver",
+"class": "ConfigSaver",
+"language": "GDScript",
+"path": "res://iniformat/config_import_plugin/config_saver.gd"
+}, {
+"base": "Node",
+"class": "SceneManager",
+"language": "GDScript",
+"path": "res://threaded_loader/scene_manager.gd"
+} ]
+_global_script_class_icons={
+"Config": "",
+"ConfigLoader": "",
+"ConfigSaver": "",
+"SceneManager": ""
+}
+
+[application]
+
+config/name="ok"
+run/main_scene="res://threaded_loader/main.tscn"
+config/icon="res://icon.png"
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
